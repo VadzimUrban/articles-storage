@@ -16,7 +16,7 @@ interface ArticlesRepository {
 
     suspend fun deleteArticleById(id: Long)
 
-    fun sortArticlesByDataFlow(year: Year): Flow<List<Article>>
+    fun sortArticlesByYearFlow(year: Year): Flow<List<Article>>
 
     fun sortArticlesByAuthorLastnameFlow(lastname: String): Flow<List<Article>>
 
