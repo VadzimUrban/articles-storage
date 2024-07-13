@@ -1,6 +1,8 @@
 package com.example.articlesstorage.domain.repositories
 
+import com.example.articlesstorage.domain.entities.Article
 import kotlinx.coroutines.flow.Flow
+import java.time.Year
 
 interface ArticlesRepository {
 
@@ -14,7 +16,7 @@ interface ArticlesRepository {
 
     suspend fun deleteArticleById(id: Long)
 
-    fun sortArticlesByDataFlow(data: Data): Flow<List<Article>>
+    fun sortArticlesByDataFlow(year: Year): Flow<List<Article>>
 
     fun sortArticlesByAuthorLastnameFlow(lastname: String): Flow<List<Article>>
 
