@@ -5,7 +5,7 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 import java.time.Year
 
-private const val ARTICLE_TABLE_NAME = "article"
+private const val ARTICLE_TABLE_NAME = "articles"
 
 @Entity(tableName = ARTICLE_TABLE_NAME)
 data class ArticleLocal(

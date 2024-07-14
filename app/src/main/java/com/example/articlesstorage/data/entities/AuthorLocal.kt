@@ -4,7 +4,7 @@ import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
-private const val AUTHOR_TABLE_NAME = "author"
+private const val AUTHOR_TABLE_NAME = "authors"
 
 @Entity(tableName = AUTHOR_TABLE_NAME)
 data class AuthorLocal(
