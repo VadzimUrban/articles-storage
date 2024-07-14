@@ -12,6 +12,6 @@ data class ArticleLocal(
     @PrimaryKey(autoGenerate = true) @ColumnInfo(name = "id") val id: Long,
     @ColumnInfo(name = "title") val title: String,
     @ColumnInfo(name = "year") val year: Year,
-    @ColumnInfo(name = "journal") val journal: JournalLocal,
+    @ColumnInfo(name = "journal_id") val journalId: Long,
     @ColumnInfo(name = "authors") val authors: List<AuthorLocal>,
 )
