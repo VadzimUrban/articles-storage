@@ -4,14 +4,15 @@ import androidx.room.Embedded
 import androidx.room.Junction
 import androidx.room.Relation
 import com.example.articlesstorage.data.entities.ArticleLocal
+import com.example.articlesstorage.data.entities.ArticleLocalAuthorLocalCrossRef
 import com.example.articlesstorage.data.entities.AuthorLocal
 
 data class ArticleWithAuthors(
-    @Embedded val article: ArticleLocal,
+    @Embedded val articleLocal: ArticleLocal,
     @Relation(
         parentColumn = "articleId",
-        entityColumn = "authorId",
-        associateBy = Junction(ArticleAuthorCrossRef::class)
+        entityColumn = "authorsId",
+        associateBy = Junction(ArticleLocalAuthorLocalCrossRef::class)
     )
-    val authors: List<AuthorLocal>
+    val authors: List<AuthorLocal>,
 )

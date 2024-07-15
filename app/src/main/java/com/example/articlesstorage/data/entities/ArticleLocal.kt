@@ -11,7 +11,6 @@ private const val ARTICLE_TABLE_NAME = "articles"
 data class ArticleLocal(
     @PrimaryKey(autoGenerate = true) @ColumnInfo(name = "id") val id: Long,
     @ColumnInfo(name = "title") val title: String,
-    @ColumnInfo(name = "year") val year: Year,
+    @ColumnInfo(name = "year") val year: Int,
     @ColumnInfo(name = "journal_id") val journalId: Long,
-    @ColumnInfo(name = "authors") val authors: List<AuthorLocal>,
 )

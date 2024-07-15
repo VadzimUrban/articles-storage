@@ -13,7 +13,7 @@ data class JournalLocal(
     @ColumnInfo(name = "title") val title: String,
     @ColumnInfo(name = "country") val country: String,
     @ColumnInfo(name = "city") val city: String,
-    @ColumnInfo(name = "year") val year: Year,
+    @ColumnInfo(name = "year") val year: Int,
     @ColumnInfo(name = "first_page") val firstPage: Int,
     @ColumnInfo(name = "last_page") val lastPage: Int,
     @ColumnInfo(name = "other_information") val otherInformation: String,

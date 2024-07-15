@@ -7,7 +7,7 @@ data class Journal(
     val title: String,
     val country: String,
     val city: String,
-    val year: Year,
+    val year: Int,
     val firstPage: Int,
     val lastPage: Int,
     val otherInformation: String,

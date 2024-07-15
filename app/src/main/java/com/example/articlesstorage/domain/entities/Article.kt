@@ -5,7 +5,7 @@ import java.time.Year
 data class Article(
     val id: Long,
     val title: String,
-    val year: Year,
+    val year: Int,
     val journal: Journal,
     val authors: List<Author>,
 )

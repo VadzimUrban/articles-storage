@@ -10,7 +10,7 @@ interface ArticlesRepository {
 
     fun getArticlesByTitleFlow(title: String): Flow<List<Article>>
 
-    suspend fun setArticle(article: Article): Article
+    suspend fun setArticle(article: Article)
 
     suspend fun updateArticle(article: Article): Article
 

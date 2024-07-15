@@ -3,18 +3,20 @@ package com.example.articlesstorage.data.localDataSource
 import androidx.room.Database
 import androidx.room.RoomDatabase
 import com.example.articlesstorage.data.entities.ArticleLocal
+import com.example.articlesstorage.data.entities.ArticleLocalAuthorLocalCrossRef
 import com.example.articlesstorage.data.entities.AuthorLocal
 import com.example.articlesstorage.data.entities.JournalLocal
-import com.example.articlesstorage.data.entities.manyToMany.ArticleAuthorCrossRef
+
+private const val DB_VERSION = 1
 
 @Database(
     entities = [
         ArticleLocal::class,
         AuthorLocal::class,
         JournalLocal::class,
-        ArticleAuthorCrossRef::class
+        ArticleLocalAuthorLocalCrossRef::class,
     ],
-    version = 1
+    version = DB_VERSION
 )
 abstract class ArticlesDataBase : RoomDatabase() {
     abstract fun getArticleDao(): ArticleDao

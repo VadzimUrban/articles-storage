@@ -4,12 +4,14 @@ import androidx.room.Embedded
 import androidx.room.Relation
 import com.example.articlesstorage.data.entities.ArticleLocal
 import com.example.articlesstorage.data.entities.JournalLocal
+import com.example.articlesstorage.data.entities.manyToMany.ArticleWithAuthors
 
-data class JournalWithArticles(
-    @Embedded val journal: JournalLocal,
+data class JournalWithArticlesAndAuthors(
+    @Embedded val journalLocal: JournalLocal,
     @Relation(
+        entity = ArticleLocal::class,
         parentColumn = "id",
-        entityColumn = "journal_id"
+        entityColumn = "journalId"
     )
-    val articles: List<ArticleLocal>
+    val article: ArticleWithAuthors
 )
