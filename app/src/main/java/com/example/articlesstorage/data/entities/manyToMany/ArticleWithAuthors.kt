@@ -10,8 +10,8 @@ import com.example.articlesstorage.data.entities.AuthorLocal
 data class ArticleWithAuthors(
     @Embedded val articleLocal: ArticleLocal,
     @Relation(
-        parentColumn = "articleId",
-        entityColumn = "authorsId",
+        parentColumn = "article_id",
+        entityColumn = "authors_id",
         associateBy = Junction(ArticleLocalAuthorLocalCrossRef::class)
     )
     val authors: List<AuthorLocal>,

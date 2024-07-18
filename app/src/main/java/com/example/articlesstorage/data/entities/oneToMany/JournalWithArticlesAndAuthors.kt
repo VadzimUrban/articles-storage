@@ -11,7 +11,7 @@ data class JournalWithArticlesAndAuthors(
     @Relation(
         entity = ArticleLocal::class,
         parentColumn = "id",
-        entityColumn = "journalId"
+        entityColumn = "journal_id"
     )
     val article: ArticleWithAuthors
 )
