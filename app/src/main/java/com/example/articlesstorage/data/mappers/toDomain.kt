@@ -87,7 +87,7 @@ fun List<AuthorLocal>.toAuthors(): List<Author> = map { authorLocal ->
 fun List<Author>.toAuthorsLocal(): List<AuthorLocal> = map { author ->
     with(author) {
         AuthorLocal(
-            id, name, lastname, surname
+            id, firstname, lastname, surname
         )
     }
 }
