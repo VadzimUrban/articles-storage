@@ -11,6 +11,10 @@ activity = "1.9.0"
 constraintlayout = "2.1.4"
 roomVersion = "2.6.1"
 kspVersion = "1.9.10-1.0.13"
+kaptVersion = "2.0.0"
+daggerVersion = "2.51.1"
+navigationSafeArgsVersion = "2.7.7"
+navigationVersion = "2.7.7"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -24,9 +28,17 @@ androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
 androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+com-google-dagger = { group = "com.google.dagger", name = "dagger", version.ref = "daggerVersion" }
+com-google-dagger-compiler = { group = "com.google.dagger", name = "dagger-compiler", version.ref = "daggerVersion" }
+androidx-navigation-fragment-ktx = { group = "androidx.navigation", name = "navigation-fragment-ktx", version.ref = "navigationVersion" }
+androidx-navigation-ui-ktx = { group = "androidx.navigation", name = "navigation-ui-ktx", version.ref = "navigationVersion" }
+
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
-google-devtools-ksp = { id = "com.google.devtools.ksp", version.ref = "kspVersion"}
+google-devtools-ksp = { id = "com.google.devtools.ksp", version.ref = "kspVersion" }
+jetbrains-kotlin-kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kaptVersion" }
+androidx-navigation-safeargs = { id = "androidx.navigation.safeargs", version.ref = "navigationSafeArgsVersion" }
+
 

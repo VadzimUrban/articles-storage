@@ -2,6 +2,8 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
     alias(libs.plugins.google.devtools.ksp)
+    alias(libs.plugins.jetbrains.kotlin.kapt)
+    alias(libs.plugins.androidx.navigation.safeargs)
 }
 
 android {
@@ -22,6 +24,13 @@ android {
         arg("room.schemaLocation", "$projectDir/schemas")
     }
 
+
+    kapt {
+        correctErrorTypes = true
+        useBuildCache = true
+    }
+
+
     buildTypes {
         release {
             isMinifyEnabled = false
@@ -37,6 +46,9 @@ android {
     }
     kotlinOptions {
         jvmTarget = "1.8"
+    }
+    buildFeatures {
+        viewBinding = true
     }
 }
 
@@ -56,4 +68,13 @@ dependencies {
     implementation (libs.androidx.room.ktx)
     implementation (libs.androidx.room.runtime)
     ksp(libs.androidx.room.compiler)
+
+    // Dagger 2
+    implementation(libs.com.google.dagger)
+    kapt(libs.com.google.dagger.compiler)
+
+    // Navigation
+    implementation(libs.androidx.navigation.fragment.ktx)
+    implementation(libs.androidx.navigation.ui.ktx)
+
 }
