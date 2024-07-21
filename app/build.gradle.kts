@@ -77,4 +77,9 @@ dependencies {
     implementation(libs.androidx.navigation.fragment.ktx)
     implementation(libs.androidx.navigation.ui.ktx)
 
+
+    // Lifecycle
+    implementation(libs.androidx.lifecycle.viewmodel.ktx)
+    implementation (libs.androidx.activity.ktx)
+    implementation (libs.androidx.fragment.ktx)
 }
